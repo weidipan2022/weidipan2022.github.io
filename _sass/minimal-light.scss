@@ -4,21 +4,27 @@
 
 .social-icons a{
   display:inline-block;
-  height:2.4rem;
-  width:2.4rem;
+  height:2.6rem;
+  width:2.6rem;
   background-color:transparent;
   color:#043361!important;
   border-radius:100%;
   text-align:center;
-  font-size:1.15rem;
-  line-height:2.5rem;
-  margin-right:1rem}
+  font-size:1.2rem;
+  line-height:2.6rem;
+  margin-right:1rem;
+  transition: all 0.3s ease;
+}
 
 @media (prefers-color-scheme: dark) { .social-icons a {color: #3eb7f0 !important; }}
 
-.social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:white;
+.social-icons a:last-child{margin-right:0}
+.social-icons a:hover{
+    background-color:white;
     color:black;
-    transform: scale(1.2)}
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
     /*
     .social-icons a:after {
         content: '';
@@ -35,9 +41,14 @@
       }
      */
 
-@media (prefers-color-scheme: dark) {.social-icons a:last-child{margin-right:0}.social-icons a:hover{background-color:#20212b;
+@media (prefers-color-scheme: dark) {
+  .social-icons a:last-child{margin-right:0}
+  .social-icons a:hover{
+    background-color:#20212b;
     color:black;
-    transform: scale(1.2)} 
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  } 
     /*
     .social-icons a:after {
         content: '';
@@ -216,11 +227,15 @@ papertitle {
 
       .image.avatar img {
         border-radius: 100%;
-        width: 45%;
+        width: 50%;
         padding: 20px;
-        // border: 1px solid #ddd;
-        // padding: 3px;
-        // box-shadow: 0 -1px 5px 1px rgba(200, 200, 200, 0.3);
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+.image.avatar img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
       }
 
     #header .image.avatar {
@@ -232,19 +247,24 @@ h3, h4, h5, h6 {
   font-weight: 600;
   color:#043361;
   margin:0 0 20px;
+  letter-spacing: -0.01em;
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 600;
   color:#043361;
   margin:0 0 20px;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   color:#043361;
-  font-weight: 500;
-  margin:2px 0px 15px;
-  font-size: 157%;
+  font-weight: 600;
+  margin:2px 0px 20px;
+  font-size: 160%;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 8px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -272,10 +292,12 @@ h1 {
 a {
   color:#39c;
   text-decoration:none;
+  transition: all 0.2s ease;
 }
 
 a:hover {
   color:#069;
+  text-decoration: underline;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -436,6 +458,7 @@ section {
   float:right;
   padding-top:4.0em;
   padding-bottom:50px;
+  line-height: 1.6;
 }
 
 small {

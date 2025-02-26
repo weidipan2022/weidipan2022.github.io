@@ -1,0 +1,106 @@
+/* Additional modern styling for the personal homepage */
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Main content styling */
+.main-content {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Section styling */
+section h2 {
+  position: relative;
+  overflow: hidden;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(4, 51, 97, 0.5), rgba(4, 51, 97, 0.1));
+}
+
+@media (prefers-color-scheme: dark) {
+  section h2::after {
+    background: linear-gradient(to right, rgba(62, 183, 240, 0.5), rgba(62, 183, 240, 0.1));
+  }
+}
+
+/* News section styling */
+section ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 5px;
+  transition: transform 0.2s ease;
+}
+
+section ul li:hover {
+  transform: translateX(3px);
+}
+
+/* Research interests styling */
+section ul li strong {
+  position: relative;
+  display: inline-block;
+}
+
+section ul li strong::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #043361;
+  transition: width 0.3s ease;
+}
+
+section ul li:hover strong::after {
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  section ul li strong::after {
+    background-color: rgb(62, 183, 240);
+  }
+}
+
+/* Card-like styling for sections */
+section > p, section > ul {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  section > p, section > ul {
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media print, screen and (max-width: 960px) {
+  section > p, section > ul {
+    padding: 10px;
+  }
+}
