@@ -1,5 +1,12 @@
 main:
 
+  - title: Optimizing Task Pricing for Crowdsourcing
+    authors: <strong>Weidi Pan</strong> and team
+    conference_short: CJEM
+    conference: Chinese Journal of Engineering Mathematics, Nov 1, 2017
+    notes: Selected as one of 37,000 papers nationwide for a multi-day mathematical modeling competition
+    image: ./assets/img/teaser_example_2.png
+
   - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
     authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
     conference_short: MICCAI
